@@ -95,6 +95,12 @@ En el contexto de la **analogía del puzzle**, podríamos decir:
 Este concepto de “piezas” y “huecos” se traduce, en la práctica, a un “contrato” entre quien llama a la función (caller) y la función llamada (callee). Observa este ejemplo:
 
 ```ts
+async function callerFunction(): Promise<void> {
+  const productoInicial = funcionLlamada();
+  const productoConDescuento = funcionLlamada2(productoInicial);
+}
+
+
 interface Producto {
   id: number;
   nombre: string;
