@@ -3,9 +3,6 @@
 > **“I hp I mk m slf clr” vs. “I hope I make myself clear”**  
 >  
 > ¿Notas la diferencia? Ambas frases comunican algo parecido, pero la segunda es infinitamente más clara. En programación ocurre algo similar: a veces renunciamos a escribir un poco más de información con tal de “aligerar” el código, pero terminamos haciendo que sea menos comprensible. El **tipado explícito** en TypeScript aporta esa claridad que se suele sacrificar por “menos letras”.
-
-En esta charla, exploraremos la idea de que cada parte de tu código (funciones, parámetros, variables) puede entenderse como “huecos” y “piezas” de un puzzle que deben **encajar perfectamente**. Cuando especificas explícitamente los tipos de entrada y salida (o el tipo de las variables), estás facilitando que quien lea —incluido tu “yo” futuro— comprenda al momento qué pieza encaja con cada hueco y evite errores antes de llegar a producción.
-
 ---
 
 ## **1. “Menos letras” no siempre equivale a “más claridad”**
@@ -44,6 +41,8 @@ function obtenerUsuario() {
 // TypeScript infiere { id: number; nombre: string } 
 // pero no es explícito para quien lee el código.
 const usuario = obtenerUsuario();
+procesarUsuario(usuario.id);
+
 ```
 
 - A simple vista, puede **no ser obvio** si el objeto devuelto tendrá siempre la misma estructura (¿existe un campo "edad"? ¿"apellido"?).  
@@ -67,6 +66,8 @@ function obtenerUsuario2(): Persona {
 
 // La variable también declara explícitamente que es "Persona"
 const usuario2: Persona = obtenerUsuario2();
+
+procesarUsuario({id: usuario2.id})
 ```
 
 - Aquí, **la forma** (`Persona`) queda definida en un solo lugar.  
