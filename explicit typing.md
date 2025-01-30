@@ -41,6 +41,8 @@ function obtenerUsuario() {
 // TypeScript infiere { id: number; nombre: string } 
 // pero no es explícito para quien lee el código.
 const usuario = obtenerUsuario();
+
+// usuario.id es de tipo string o number?
 procesarUsuario(usuario.id);
 
 ```
@@ -68,6 +70,12 @@ function obtenerUsuario2(): Persona {
 const usuario2: Persona = obtenerUsuario2();
 
 procesarUsuario({id: usuario2.id})
+
+...
+
+function procesarUsuario({id: number});
+
+
 ```
 
 - Aquí, **la forma** (`Persona`) queda definida en un solo lugar.  
