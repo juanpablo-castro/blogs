@@ -248,6 +248,3 @@ En resumen, **“I hp I mk m slf clr”** puede funcionar, pero **“I hope I ma
 Con TypeScript y el **tipado explícito** sucede lo mismo: no es obligatorio, pero **clarifica y previene** muchos problemas. Y al final, un código claro es un código que se puede evolucionar sin sobresaltos.
 
 ---
-
-### **¡Gracias por leer/escuchar esta charla!**  
-Espero que esta analogía y estos ejemplos te ayuden a ver el valor de hacer un pequeño esfuerzo adicional para explicitar tus tipos. Así, cada pieza encaja perfectamente en su hueco, y tu proyecto crece de forma sólida y legible para todos.
